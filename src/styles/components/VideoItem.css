@@ -1,0 +1,26 @@
+.video-item__container {
+    padding: .5rem;
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+
+}
+
+.video-item__container:hover {
+    background: rgb(68, 68, 68);
+}
+
+.video-item__content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.video-item__content > img {
+    width: 40%;
+}
+
+.video-item__content > p {
+    width: 40%;
+}
+

@@ -1,0 +1,10 @@
+.video-section__container {
+    padding: 1rem;
+    border: 1px solid black
+}
+
+.video-section__content {
+    display: flex;
+    justify-content: space-evenly;
+
+}

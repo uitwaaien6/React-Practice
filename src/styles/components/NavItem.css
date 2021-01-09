@@ -1,0 +1,10 @@
+.nav-item {
+    font-size: 2rem;
+    color: white;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}

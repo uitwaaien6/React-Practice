@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app__container {
+
+    color: black;
+    font-family:'Courier New', Courier, monospace;
+}

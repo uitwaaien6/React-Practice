@@ -1,0 +1,14 @@
+.nav-bar {
+    width: 100%;
+    height: 4rem;
+    background-color: black;
+}
+
+.nav-bar > ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+    height: 100%;
+
+}

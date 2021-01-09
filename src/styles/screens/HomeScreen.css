@@ -1,0 +1,11 @@
+.home-screen__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.home-screen__content {
+    width: 80%;
+    
+}
