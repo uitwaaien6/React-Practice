@@ -19,6 +19,7 @@ class Dropdown extends React.Component {
                 
                     <div 
                         className="dropdown__item"
+                        key={item.value || index}
                     >
                         <p 
                             onClick={() => {

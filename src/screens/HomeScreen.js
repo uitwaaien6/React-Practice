@@ -11,6 +11,8 @@ import { MdCenterFocusStrong } from "react-icons/md";
 import axios from 'axios';
 import '../styles/screens/HomeScreen.css';
 
+// not much css but it can be added easily, focused on the functionality of the GUI's
+
 class HomeScreen extends React.Component {
     constructor(props) {
         super(props);
@@ -86,19 +88,26 @@ class HomeScreen extends React.Component {
         }
 
         this.setState({ ...this.state, textToTranslate: e.target.value });
+        console.log(' ~ Sending a Translaton Request...')
 
         this.timerId = setTimeout(async () => {
-            const response = await axios.post('https://translation.googleapis.com/language/translate/v2', {}, {
-                params: {
-                    q: this.state.textToTranslate,
-                    target: this.state.menuItems[this.state.selectedItem].value,
-                    key: 'AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM'
-                }
-            });
 
-            console.log(response.data.data.translations[0].translatedText);
+            if (this.state.textToTranslate !== '') {
 
-            this.setState({ ...this.state, translatedText: response.data.data.translations[0].translatedText });
+                const response = await axios.post('https://translation.googleapis.com/language/translate/v2', {}, {
+                    params: {
+                        q: this.state.textToTranslate,
+                        target: this.state.menuItems[this.state.selectedItem].value,
+                        key: 'AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM'
+                    }
+                });
+
+                
+                console.log(response.data.data.translations[0].translatedText);
+    
+                this.setState({ ...this.state, translatedText: response.data.data.translations[0].translatedText });
+            }
+
         }, 1000);
     }
 
