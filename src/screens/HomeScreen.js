@@ -8,6 +8,7 @@ import Navbar from '../components/Navbar';
 import NavItem from '../components/NavItem';
 import Dropdown from '../components/Dropdown';
 import { MdCenterFocusStrong } from "react-icons/md";
+
 import axios from 'axios';
 import '../styles/screens/HomeScreen.css';
 
@@ -101,9 +102,6 @@ class HomeScreen extends React.Component {
                         key: 'AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM'
                     }
                 });
-
-                
-                console.log(response.data.data.translations[0].translatedText);
     
                 this.setState({ ...this.state, translatedText: response.data.data.translations[0].translatedText });
             }
@@ -112,6 +110,7 @@ class HomeScreen extends React.Component {
     }
 
     render() {
+
         return (
             <div className="home-screen__container">
                 <div style={{ height: '120rem' }} className="home-screen__content">
@@ -156,5 +155,7 @@ class HomeScreen extends React.Component {
         );
     };
 }
+
+
 
 export default HomeScreen;

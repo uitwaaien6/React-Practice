@@ -35,6 +35,7 @@ class Widgets extends React.Component {
 
     handleInput(e) {
         if (this.timerId) {
+            console.log(typeof this.timerId);
             clearTimeout(this.timerId);
         }
 
